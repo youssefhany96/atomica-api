@@ -22,7 +22,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "https://blog-post-ec2195341fe8.herokuapp.com/api/",
   "browserslist": {
     "production": [
       ">0.2%",
