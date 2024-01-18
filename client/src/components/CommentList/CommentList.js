@@ -1,7 +1,6 @@
-// CommentList.js
-import React from 'react';
-import Comment from '../Comment';
-import './CommentList.css';
+import React from "react";
+import Comment from "../Comment";
+import "./CommentList.css";
 
 const CommentList = ({ comments, onDelete, onUpdate }) => {
   return (

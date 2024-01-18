@@ -9,7 +9,7 @@ const PostList = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get(`${API_BASE_URL}/posts`)
+      const res = await axios.get(`${API_BASE_URL}/posts`);
       setPosts(res.data.data.posts);
     };
     fetchPosts();
