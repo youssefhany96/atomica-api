@@ -51,7 +51,19 @@ The application supports the following operations:
 - **Delete Post**: Users can delete a blog post.
 - **Add Comment**: Users can add comments to a blog post.
 - **Edit Comment**: Users can edit an existing comment.
-- **Delete Comment**: Users can delete a comment..
+- **Delete Comment**: Users can delete a comment.
+
+## Live Demo
+
+Explore the live versions of the blog application on different platforms:
+
+- **Backend (API):** Deployed on Heroku
+  - [Heroku Backend Link](https://blog-post-ec2195341fe8.herokuapp.com/api/posts)
+
+- **Frontend (React App):** Deployed on Netlify
+  - [Netlify Frontend Link](https://effulgent-cobbler-bc4931.netlify.app)
+
+Feel free to interact with the application's backend API on Heroku and explore the frontend on Netlify. The backend handles data storage and retrieval, while the frontend provides the user interface.
 
 ## API Endpoints
 
