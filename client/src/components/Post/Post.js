@@ -23,7 +23,7 @@ const Post = ({ post }) => {
     <div className="post-container">
       <h4 className="post-title">{post.title}</h4>
       <p className="post-author">By {post.author}</p>
-      <p className="post-summary">{post.content.substring(0, 100)}...</p>
+      <p className="post-summary">{post.content.length > 100 ? post.content.substring(0, 100) + "..." : post.content}</p>
       <div className="post-actions">
         <button onClick={handleViewPost} className="view-button">
           <FaRegEye /> View

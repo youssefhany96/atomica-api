@@ -2,15 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "./DetailedPostView.css"; // Import the CSS file
-import CommentList from "../CommentList/CommentList";
-import CommentForm from "../CommentForm/CommentForm";
+import CommentList from "../../components/CommentList"
+import CommentForm from "../../components/CommentForm";
 
 const DetailedPostView = () => {
   const [post, setPost] = useState(null);
   const [comments, setComments] = useState([]);
   const { id } = useParams();
-
-  console.log("comments", comments);
 
   useEffect(() => {
     const fetchPostAndComments = async () => {

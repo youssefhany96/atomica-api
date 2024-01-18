@@ -11,7 +11,6 @@ const PostSchema = new Schema({
   comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }]
 });
 
-// Sets the createdAt parameter equal to the current time
 PostSchema.pre('save', function(next) {
   if (!this.createdAt) {
     this.createdAt = new Date();
@@ -19,6 +18,5 @@ PostSchema.pre('save', function(next) {
   next();
 });
 
-// Exports the PostSchema for use elsewhere.
 const Post = mongoose.model('Post', PostSchema);
 module.exports = Post;
