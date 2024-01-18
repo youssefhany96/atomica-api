@@ -26,7 +26,6 @@ Before you begin, ensure you have MongoDB, Node.js, and npm/yarn installed on yo
      npm install
 6. **Start the backend server:**
    ```bash
-     cd ..
      npm start
 7. **Start the React application:**
    ```bash
