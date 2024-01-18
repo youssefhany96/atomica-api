@@ -15,7 +15,11 @@ const commentsRouter = require('./routes/commentRoutes');
 const app = express();
 
 // setup connection to mongo
-mongoose.connect(CONNECTION_STRING);
+mongoose.connect(CONNECTION_STRING, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  ssl: true, // Enable SSL
+});
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
