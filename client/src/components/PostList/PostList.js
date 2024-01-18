@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "../Post";
 import "./PostList.css";
+import API_BASE_URL from "../../config";
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts");
+      const res = await axios.get(`${API_BASE_URL}/posts`)
       setPosts(res.data.data.posts);
     };
     fetchPosts();

@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import "./DetailedPostView.css"; // Import the CSS file
+import "./DetailedPostView.css";
 import CommentList from "../../components/CommentList"
 import CommentForm from "../../components/CommentForm";
+import API_BASE_URL from "../../config";
 
 const DetailedPostView = () => {
   const [post, setPost] = useState(null);
@@ -12,9 +13,9 @@ const DetailedPostView = () => {
 
   useEffect(() => {
     const fetchPostAndComments = async () => {
-      const postResponse = await axios.get(`/posts/${id}`);
+      const postResponse = await axios.get(`${API_BASE_URL}/posts/${id}`)
       setPost(postResponse.data.data.post);
-      const commentsResponse = await axios.get(`/comments/${id}`);
+      const commentsResponse = await axios.get(`${API_BASE_URL}/comments/${id}`);
       setComments(commentsResponse.data.data.comments);
     };
     fetchPostAndComments();
@@ -27,7 +28,7 @@ const DetailedPostView = () => {
 
   const handleDeleteComment = async (commentId) => {
     try {
-      await axios.delete(`/comments/${commentId}`);
+      await axios.delete(`${API_BASE_URL}/comments/${commentId}`);
       setComments(comments.filter((comment) => comment._id !== commentId));
     } catch (error) {
       console.error("Error deleting comment:", error);
@@ -36,7 +37,7 @@ const DetailedPostView = () => {
 
   const handleUpdateComment = async (updatedComment) => {
     try {
-      await axios.put(`/comments/${updatedComment._id}`, updatedComment);
+      await axios.put(`${API_BASE_URL}/comments/${updatedComment._id}`, updatedComment);
       setComments(comments.map((comment) => comment._id === updatedComment._id ? updatedComment : comment));
     } catch (error) {
       console.error("Error updating comment:", error);

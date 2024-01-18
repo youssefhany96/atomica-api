@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Post.css";
 import { FaEdit, FaTrash, FaRegEye } from "react-icons/fa";
 import axios from "axios";
+import API_BASE_URL from "../../config";
 
 const Post = ({ post }) => {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ const Post = ({ post }) => {
   };
 
   const handleDelete = () => {
-    axios.delete(`/posts/${post._id}`);
+    axios.delete(`${API_BASE_URL}/posts/${post._id}`)
   };
 
   return (

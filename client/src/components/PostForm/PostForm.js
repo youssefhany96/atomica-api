@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './PostForm.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from "../../config";
 
 const PostForm = ({ post }) => {
   const [title, setTitle] = useState(post ? post.title : '');
@@ -20,9 +21,9 @@ const PostForm = ({ post }) => {
     const postData = { title, content, author };
     try {
       if (post) {
-        await axios.put(`/posts/${post._id}`, postData);
+        await axios.put(`${API_BASE_URL}/posts/${post._id}`, postData);
       } else {
-        await axios.post('/posts', postData);
+        await axios.post(`${API_BASE_URL}/posts`, postData);
       }
       navigate('/');
     } catch (error) {

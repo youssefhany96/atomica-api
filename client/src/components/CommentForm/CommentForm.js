@@ -1,8 +1,8 @@
 // CommentForm.js
 import React, { useState } from "react";
 import axios from "axios";
-
 import "./CommentForm.css";
+import API_BASE_URL from "../../config";
 
 const CommentForm = ({ postId, onCommentAdded }) => {
   const [text, setText] = useState("");
@@ -11,7 +11,7 @@ const CommentForm = ({ postId, onCommentAdded }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`/comments/${postId}`, {
+      const { data } = await axios.post(`${API_BASE_URL }/comments/${postId}`, {
         text,
         author,
       });
