@@ -1,0 +1,80 @@
+.post-container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-container:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.post-title {
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.post-author {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.post-summary {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.edit-button,
+.delete-button,
+.view-button
+ {
+  display: flex; /* Add display: flex */
+  align-items: center; /* Add align-items: center */
+  border: none;
+  padding: 8px 12px;
+  margin-left: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s;
+}
+
+.view-button {
+  background-color: #17a2b8;
+  color: white;
+  gap: 4px;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529;
+  gap: 4px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  gap: 4px;
+}
+
+.view-button:hover {
+  background-color: #1395ba;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+

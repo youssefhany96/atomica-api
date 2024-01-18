@@ -1,0 +1,33 @@
+.post-list-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.post-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.post-list-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.add-post-button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-post-button:hover {
+  background-color: #218838;
+}
+

@@ -1,0 +1,66 @@
+.comment-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.comment-author {
+  margin-right: 15px;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.comment-text,
+.comment-edit-textarea {
+  flex-grow: 1;
+  color: #333;
+}
+
+.comment-edit-textarea {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.edit-button,
+.delete-button,
+.save-button,
+.cancel-button {
+  margin-left: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cancel-button {
+  color: #dc3545; /* red color for cancel icon */
+}
+
+.save-button {
+  color: #28a745; /* green color for save icon */
+}
+
+.edit-button {
+  color: #ffa500; /* orange color for edit icon */
+}
+
+.delete-button {
+  color: #ff4500; /* red color for delete icon */
+}
+
+.fa-edit,
+.fa-trash,
+.fa-save {
+  margin-right: 5px;
+}

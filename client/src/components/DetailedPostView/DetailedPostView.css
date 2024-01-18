@@ -1,0 +1,24 @@
+.detailed-post-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.detailed-post-title {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.detailed-post-content {
+  color: #666;
+}
+
+.post-author {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
